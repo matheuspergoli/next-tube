@@ -30,13 +30,15 @@
 		"@commitlint/config-conventional": "^17.3.0",
 		"autoprefixer": "^10.4.13",
 		"cz-conventional-changelog": "^3.3.0",
+		"formik": "^2.2.9",
 		"husky": "^8.0.2",
 		"lint-staged": "^13.1.0",
 		"postcss": "^8.4.20",
 		"prettier": "^2.8.1",
 		"prettier-plugin-tailwindcss": "^0.2.1",
 		"react-icons": "^4.7.1",
-		"tailwindcss": "^3.2.4"
+		"tailwindcss": "^3.2.4",
+		"yup": "^0.32.11"
 	},
 	"lint-staged": {
 		"*.{js,jsx,ts,tsx}": [
