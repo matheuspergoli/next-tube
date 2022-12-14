@@ -1,10 +1,17 @@
 import React from 'react'
+import Head from 'next/head'
+import { MainContainer } from '../components/MainContainer'
 
 function Home() {
 	return (
-		<main>
-			<h1>NextJS App</h1>
-		</main>
+		<>
+			<Head>
+				<title>Next Tube</title>
+			</Head>
+			<MainContainer>
+				<h1>Home</h1>
+			</MainContainer>
+		</>
 	)
 }
 
