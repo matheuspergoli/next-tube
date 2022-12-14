@@ -1,5 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
+import { useRouter } from 'next/router'
 import { useMedia } from '../../hooks/useMedia'
 import { MdClose as CloseIcon } from 'react-icons/md'
 import { AiOutlineMenu as MenuIcon } from 'react-icons/ai'
@@ -7,6 +8,7 @@ import { useSupabaseClient, useUser } from '@supabase/auth-helpers-react'
 
 export const Header = () => {
 	const user = useUser()
+	const router = useRouter()
 	const supabaseClient = useSupabaseClient()
 	const isMobile = useMedia('(max-width: 640px)')
 	const modalRef = React.useRef<HTMLDialogElement>(null)
@@ -36,6 +38,7 @@ export const Header = () => {
 
 	async function handleLogout() {
 		const { error } = await supabaseClient.auth.signOut()
+		router.push('/')
 	}
 
 	return (
