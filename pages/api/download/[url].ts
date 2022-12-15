@@ -15,7 +15,7 @@ async function handler(req: NextApiRequest, res: NextApiResponse) {
 
 export const config = {
 	api: {
-		responseLimit: false
+		responseLimit: '100mb'
 	}
 }
 
