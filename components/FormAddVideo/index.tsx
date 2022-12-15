@@ -3,7 +3,7 @@ import { Formik, Form, Field } from 'formik'
 import { AddItemValidation } from '../../validation/AddVideoValidation'
 import { useSupabaseClient, useUser } from '@supabase/auth-helpers-react'
 
-export const FormAddVideo = () => {
+export const FormAddVideo = (props: { refetch: Function }) => {
 	const user = useUser()
 	const supabase = useSupabaseClient()
 
@@ -39,6 +39,7 @@ export const FormAddVideo = () => {
 				await addVideo(values)
 				setSubmitting(false)
 				resetForm()
+				props.refetch()
 			}}>
 			{({ isSubmitting, errors, touched }) => (
 				<Form className='flex flex-col gap-4'>
