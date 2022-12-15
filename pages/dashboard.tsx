@@ -84,7 +84,7 @@ function Dashboard() {
 								onClick={() => deleteVideo(video.id)}>
 								Excluir
 							</button>
-							<Link href={`/video/${video.id}`}>
+							<Link href={video.link}>
 								<img src={video.thumb} alt={video.title} className='w-full' />
 								<h2 className='text-center font-semibold'>{video.title}</h2>
 							</Link>
