@@ -7,7 +7,7 @@ function PageError500() {
 	React.useEffect(() => {
 		setTimeout(() => {
 			router.push('/')
-		}, 5000)
+		}, 6000)
 	}, [router])
 
 	return (
