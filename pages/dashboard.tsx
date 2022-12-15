@@ -35,14 +35,22 @@ function Dashboard() {
 	const user = useUser()
 	const supabase = useSupabaseClient()
 
-	const { data: videos, refetch } = useQuery('user-videos', async () => {
-		const { data, error } = await supabase.from('videos').select('*').eq('user_id', user?.id)
-		if (error) {
-			return
-		} else {
-			return data as Video[]
+	const { data: videos, refetch } = useQuery(
+		'user-videos',
+		async () => {
+			const { data, error } = await supabase.from('videos').select('*').eq('user_id', user?.id)
+			if (error) {
+				return
+			} else {
+				return data as Video[]
+			}
+		},
+		{
+			retry: 3,
+			retryDelay: 1000,
+			enabled: !!user?.id
 		}
-	})
+	)
 
 	async function handleRefetch() {
 		await refetch()
