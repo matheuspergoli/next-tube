@@ -13,4 +13,10 @@ async function handler(req: NextApiRequest, res: NextApiResponse) {
 	ytdl(url, { format: format }).pipe(res)
 }
 
+export const config = {
+	api: {
+		responseLimit: false
+	}
+}
+
 export default handler
