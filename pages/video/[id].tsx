@@ -13,9 +13,7 @@ function Video() {
 				<title>Video</title>
 			</Head>
 			<MainContainer>
-				<button
-					onClick={() => router.push('/')}
-					className='mb-10 rounded-md bg-zinc-800 px-3 py-2 text-white'>
+				<button onClick={() => router.back()} className='mb-10 rounded-md bg-zinc-800 px-3 py-2 text-white'>
 					Voltar
 				</button>
 				<iframe
