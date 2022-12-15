@@ -7,11 +7,11 @@ function PageError500() {
 	React.useEffect(() => {
 		setTimeout(() => {
 			router.push('/')
-		}, 3000)
+		}, 5000)
 	}, [router])
 
 	return (
-		<main className='flex h-screen w-screen flex-col items-center justify-center'>
+		<main className='mt-32 flex h-screen flex-col items-center justify-center'>
 			<h1 className='text-2xl font-bold'>
 				Parece que você tentou fazer o download de um arquivo muito pesado, e infelizmente não conseguimos
 				liberar ele pre você.
