@@ -6,7 +6,7 @@ async function handler(req: NextApiRequest, res: NextApiResponse) {
 	console.log(url)
 
 	const info = await ytdl.getInfo(url as string)
-	const format = ytdl.chooseFormat(info.formats, { quality: 'lowestaudio', filter: 'audioonly' })
+	const format = ytdl.chooseFormat(info.formats, { quality: 'highest', filter: 'audioonly' })
 
 	res.setHeader('Content-Disposition', `attachment; filename="${info.videoDetails.title}.webm"`)
 	res.setHeader('Content-Type', 'video/webm')
