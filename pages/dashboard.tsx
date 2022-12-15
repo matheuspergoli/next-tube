@@ -25,7 +25,9 @@ export const getServerSideProps: GetServerSideProps = async (context: GetServerS
 	}
 
 	return {
-		props: {}
+		props: {
+			data: 'Running on the server'
+		}
 	}
 }
 
