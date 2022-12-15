@@ -61,7 +61,7 @@ function Dashboard() {
 			<MainContainer>
 				<h1 className='mb-10 border-b text-3xl font-bold'>Adicionar Vídeos</h1>
 
-				<FormAddVideo />
+				<FormAddVideo refetch={handleRefetch} />
 
 				{videos?.length === 0 ? (
 					<h1 className='mt-10 mb-5 border-b text-3xl font-bold'>Você não tem vídeos</h1>
