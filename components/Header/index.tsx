@@ -55,7 +55,7 @@ export const Header = () => {
 						<nav
 							className={`${
 								isMenuMobileActive ? 'flex' : 'hidden'
-							} absolute right-6 top-16 flex-col items-center gap-5 rounded-md bg-zinc-800 p-3 text-white`}>
+							} absolute right-6 top-16 z-50 flex-col items-center gap-5 rounded-md bg-zinc-800 p-3 text-white`}>
 							{user ? (
 								<>
 									<Link href='/' onClick={closeMenu} className='text-xl font-semibold'>
