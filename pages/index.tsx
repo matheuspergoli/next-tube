@@ -29,7 +29,7 @@ function Home() {
 			</Head>
 			<MainContainer>
 				{videos?.length === 0 && (
-					<h1 className='text-center text-3xl font-bold'>Ainda não temos vídeos, adicione um!</h1>
+					<h1 className='text-center text-3xl font-bold'>Ainda não temos vídeos, adicione um!.</h1>
 				)}
 				<section className='grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4'>
 					{videos?.map((video) => (
